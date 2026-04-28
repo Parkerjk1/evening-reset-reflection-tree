@@ -1,3 +1,6 @@
+# Reflection Tree Diagram
+
+```mermaid
 flowchart TD
 
 START([Start: Good evening]) --> Q1{How did today feel?}
@@ -27,3 +30,4 @@ Q6 --> R3[Reflection: Meaning grows beyond self]
 R3 --> SUMMARY([Summary of today's path])
 
 SUMMARY --> END([End: See you tomorrow])
+```
