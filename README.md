@@ -62,6 +62,12 @@ Files:
 
 ---
 
+## Run Agent
+
+```bash
+cd agent
+python main.py
+
 ## Future Improvements
 
 - Web interface
