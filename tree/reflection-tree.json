@@ -1,1 +1,164 @@
+{
+  "title": "Evening Reset Reflection Tree",
+  "start": "START",
+  "nodes": [
+    {
+      "id": "START",
+      "type": "start",
+      "text": "Good evening. Let's reflect on your day.",
+      "next": "Q1"
+    },
 
+    {
+      "id": "Q1",
+      "type": "question",
+      "axis": "axis1",
+      "text": "How did today feel overall?",
+      "options": ["Productive", "Mixed", "Stressful", "Frustrating"],
+      "nextMap": {
+        "Productive": "Q2A",
+        "Mixed": "Q2A",
+        "Stressful": "Q2B",
+        "Frustrating": "Q2B"
+      }
+    },
+
+    {
+      "id": "Q2A",
+      "type": "question",
+      "axis": "axis1",
+      "text": "What helped things go well?",
+      "options": ["My preparation", "Team support", "Luck", "Quick adjustment"],
+      "signalMap": {
+        "My preparation": "internal",
+        "Quick adjustment": "internal",
+        "Team support": "external",
+        "Luck": "external"
+      },
+      "next": "R1"
+    },
+
+    {
+      "id": "Q2B",
+      "type": "question",
+      "axis": "axis1",
+      "text": "When things got hard, what was your first response?",
+      "options": ["Control what I can", "Wait for help", "Feel stuck", "Change approach"],
+      "signalMap": {
+        "Control what I can": "internal",
+        "Change approach": "internal",
+        "Wait for help": "external",
+        "Feel stuck": "external"
+      },
+      "next": "R1"
+    },
+
+    {
+      "id": "R1",
+      "type": "reflection",
+      "text": "Today showed moments of choice. Even small actions reveal agency.",
+      "next": "B1"
+    },
+
+    {
+      "id": "B1",
+      "type": "bridge",
+      "text": "Now let's shift from control to contribution.",
+      "next": "Q3"
+    },
+
+    {
+      "id": "Q3",
+      "type": "question",
+      "axis": "axis2",
+      "text": "Which moment best describes you today?",
+      "options": ["Helped someone", "Wanted more recognition", "Did extra work", "Felt overlooked"],
+      "signalMap": {
+        "Helped someone": "contribution",
+        "Did extra work": "contribution",
+        "Wanted more recognition": "entitlement",
+        "Felt overlooked": "entitlement"
+      },
+      "next": "Q4"
+    },
+
+    {
+      "id": "Q4",
+      "type": "question",
+      "axis": "axis2",
+      "text": "What mattered more today?",
+      "options": ["Team progress", "My credit", "Finishing well", "Being noticed"],
+      "signalMap": {
+        "Team progress": "contribution",
+        "Finishing well": "contribution",
+        "My credit": "entitlement",
+        "Being noticed": "entitlement"
+      },
+      "next": "R2"
+    },
+
+    {
+      "id": "R2",
+      "type": "reflection",
+      "text": "Contribution often creates meaning faster than recognition does.",
+      "next": "B2"
+    },
+
+    {
+      "id": "B2",
+      "type": "bridge",
+      "text": "Now let's widen the lens beyond yourself.",
+      "next": "Q5"
+    },
+
+    {
+      "id": "Q5",
+      "type": "question",
+      "axis": "axis3",
+      "text": "Who comes to mind when you think of today's challenge?",
+      "options": ["Only me", "My team", "A colleague", "Customer/end user"],
+      "signalMap": {
+        "Only me": "self",
+        "My team": "wide",
+        "A colleague": "wide",
+        "Customer/end user": "wide"
+      },
+      "next": "Q6"
+    },
+
+    {
+      "id": "Q6",
+      "type": "question",
+      "axis": "axis3",
+      "text": "Tomorrow, whose day could improve because of you?",
+      "options": ["Mine only", "Teammate", "Client", "Many people"],
+      "signalMap": {
+        "Mine only": "self",
+        "Teammate": "wide",
+        "Client": "wide",
+        "Many people": "wide"
+      },
+      "next": "R3"
+    },
+
+    {
+      "id": "R3",
+      "type": "reflection",
+      "text": "Meaning grows when your effort touches lives beyond your own.",
+      "next": "SUMMARY"
+    },
+
+    {
+      "id": "SUMMARY",
+      "type": "summary",
+      "text": "You reflected on agency, contribution, and impact. Return tomorrow stronger.",
+      "next": "END"
+    },
+
+    {
+      "id": "END",
+      "type": "end",
+      "text": "See you tomorrow."
+    }
+  ]
+}
