@@ -67,6 +67,9 @@ Files:
 ```bash
 cd agent
 python main.py
+```
+
+---
 
 ## Future Improvements
 
@@ -75,3 +78,5 @@ python main.py
 - Session history tracking
 - Team analytics dashboard
 - Multilingual support
+
+---
